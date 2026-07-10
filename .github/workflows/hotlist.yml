@@ -33,7 +33,7 @@ jobs:
           # node bilibili.js > bilibili.json
           bash weibo.sh > weibo.json
           find . -maxdepth 1 -name '*.json' -empty -delete
-          rm package.json
+          rm package*.json
       - run: |
           curl -sSL https://topnews.imtt.qq.com/trpc.pcse.top_news.TopNews/Fetch \
             | tee /dev/stderr | jq -r '.news[0] | "## 📣 最高指示 🫵🏻\n\n[\(.title)](\(.url))"' > topnews.md
