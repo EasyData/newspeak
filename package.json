@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "description": "Yet Another Hotlist Scraper",
   "dependencies": {
-    "puppeteer-core": "^21.5.0"
+    "puppeteer-core": "^25.3.0"
   }
 }
