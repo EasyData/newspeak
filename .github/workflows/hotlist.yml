@@ -51,6 +51,7 @@ jobs:
         run: echo "::set-output name=dt::$(TZ=UTC date +%Y%m%d-%H%M%S)"
       - uses: softprops/action-gh-release@v2
         with:
+          draft: false
           tag_name: hotlist-${{ steps.date.outputs.dt }}
           body_path: topnews.md
           files: |
