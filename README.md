@@ -8,11 +8,11 @@ Propaganda (Fake News in China)
 ## Supported Sites
 
 - [x] baidu
-- [x] bilibili
+- [ ] bilibili
 - [x] so
 - [x] sogou
 - [x] toutiao
-- [x] weibo
+- [ ] weibo
 - [x] zhihu
 
 ## Latest News

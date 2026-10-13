@@ -18,6 +18,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - uses: rashida-thorne/setup-cull@v1
       - run: |
           sudo apt-get -y install fonts-wqy-zenhei
           wget https://github.com/mgdm/htmlq/releases/download/v0.4.0/htmlq-x86_64-linux.tar.gz
@@ -30,8 +31,6 @@ jobs:
           bash sogou.sh > sogou.json
           bash toutiao.sh > toutiao.json
           bash zhihu.sh > zhihu.json
-          # node bilibili.js > bilibili.json
-          bash weibo.sh > weibo.json
           find . -maxdepth 1 -name '*.json' -empty -delete
           rm package*.json
       - run: |
@@ -49,7 +48,7 @@ jobs:
             | convert -background red -fill white -gravity Center -font 'WenQuanYi-Zen-Hei' -pointsize 48 label:@- banner.jpg
       - id: date
         run: echo "::set-output name=dt::$(TZ=UTC date +%Y%m%d-%H%M%S)"
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           draft: false
           tag_name: hotlist-${{ steps.date.outputs.dt }}
@@ -57,6 +56,3 @@ jobs:
           files: |
             banner.jpg
             *.json
-          # weibo.png
-          # bilibili.json
-          # bilibili.png
