@@ -1,9 +1,9 @@
-Propaganda (Fake News in China)
-===============================
+NewSpeak (Fake News in China)
+==============================
 
-![](https://github.com/easydata/propaganda/actions/workflows/update.yml/badge.svg)
+![](https://github.com/easydata/newspeak/actions/workflows/update.yml/badge.svg)
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Spectators_in_front_of_a_large_sign_on_Nixon%27s_motorcade_route_in_China._-_NARA_-_194413.tif/lossy-page1-440px-Spectators_in_front_of_a_large_sign_on_Nixon%27s_motorcade_route_in_China._-_NARA_-_194413.tif.jpg)
+![](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Spectators_in_front_of_a_large_sign_on_Nixon%27s_motorcade_route_in_China._-_NARA_-_194413.tif/lossy-page1-960px-Spectators_in_front_of_a_large_sign_on_Nixon%27s_motorcade_route_in_China._-_NARA_-_194413.tif.jpg)
 
 ## Supported Sites
 
@@ -13,7 +13,7 @@ Propaganda (Fake News in China)
 - [x] sogou
 - [x] toutiao
 - [ ] weibo
-- [x] zhihu
+- [ ] zhihu
 
 ## Latest News
 

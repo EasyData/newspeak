@@ -7,17 +7,17 @@ on:
 
 jobs:
   crawl:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     services:
       chrome:
         image: browserless/chrome:1-chrome-stable
         ports:
           - 3000:3000
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 24
       - uses: rashida-thorne/setup-cull@v1
       - run: |
           sudo apt-get -y install fonts-wqy-zenhei
@@ -30,7 +30,6 @@ jobs:
           bash so.sh > so.json
           bash sogou.sh > sogou.json
           bash toutiao.sh > toutiao.json
-          bash zhihu.sh > zhihu.json
           find . -maxdepth 1 -name '*.json' -empty -delete
           rm package*.json
       - run: |
