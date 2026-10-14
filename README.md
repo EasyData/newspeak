@@ -18,7 +18,7 @@ NewSpeak (Fake News in China)
 ## Latest News
 
 ```bash
-curl -s https://api.github.com/repos/EasyData/propaganda/releases/latest |
+curl -s https://api.github.com/repos/EasyData/newspeak/releases/latest |
   jq -r '.assets[]|select(.name|test("json$")).browser_download_url' |
     wget -q -i- -O- |
       less
@@ -26,7 +26,7 @@ curl -s https://api.github.com/repos/EasyData/propaganda/releases/latest |
 ## Red Banner
 
 ```bash
-curl -s https://api.github.com/repos/EasyData/propaganda/releases/latest |
+curl -s https://api.github.com/repos/EasyData/newspeak/releases/latest |
   jq -r '.assets[]|select(.name=="banner.jpg").browser_download_url' |
     sed 's/^/url = /' |
       curl -sLK- |
